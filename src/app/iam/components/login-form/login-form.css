@@ -1,0 +1,19 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+}
+
+label {
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 8px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

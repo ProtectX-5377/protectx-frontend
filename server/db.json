@@ -1,0 +1,18 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Leanne Graham",
+            "username": "LGraham",
+            "password": "admin123",
+            "email": "LGraham@gmail.com"
+        },
+        {
+            "id": 2,
+            "name": "Ervin Howell",
+            "username": "EHowell",
+            "password": "admin123",
+            "email": "EHowell@gmail.com"
+        }
+    ]
+}
