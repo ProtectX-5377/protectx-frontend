@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  height: 100vh;
+  background-color: #0E587C;
+}
+
+:host ::ng-deep body {
+  background-color: #0E587C;
+}
+

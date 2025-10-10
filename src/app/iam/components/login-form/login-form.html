@@ -1,10 +1,41 @@
-<form [formGroup]="loginForm">
-  <label for="username">Usuario</label>
-  <input id="username" formControlName="username" />
+<section class="login-container">
+  <div class="login-info">
+    <h2>Bienvenido a Sentinel</h2>
+    <img src="logo.png" alt="Sentinel logo" class="logo" />
+    <h3>¿No tienes cuenta?</h3>
+    <h2 class="link">Ir a registro</h2>
+  </div>
 
-  <label for="password">Contraseña</label>
-  <input id="password" type="password" formControlName="password" />
+  <div class="login-form-container">
+    <h2>Inicia sesión con</h2>
 
-  <button type="submit">Ingresar</button>
-</form>
+    <div class="social-buttons">
+      <div class="social-btn facebook">
+        <p>📘</p>
+        <h2>Facebook</h2>
+        <p>➡️</p>
+      </div>
+      <div class="social-btn google">
+        <p>🔴</p>
+        <h2>Google</h2>
+        <p>➡️</p>
+      </div>
+    </div>
 
+    <div class="separator">
+      <span></span>
+      <p>O</p>
+      <span></span>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <label>{{'login.username' | translate}}:</label>
+      <input formControlName="username" />
+
+      <label>{{'login.password' | translate}}:</label>
+      <input type="password" formControlName="password" />
+
+      <button type="submit">{{'login.submit' | translate}}</button>
+    </form>
+  </div>
+</section>

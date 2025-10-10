@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0E587C; /* mismo fondo que tu UserLayout */
+  color: black;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* separación entre logo y texto */
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}

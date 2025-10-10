@@ -34,8 +34,8 @@ export class UsersStore {
     this.loadingSignal.set(true);
     this.errorSignal.set(null);
     this.iamApi.createUser(user).pipe(retry(2)).subscribe({
-      next: createdCategory => {
-        this.usersSignal.update(categories => [...categories, createdCategory]);
+      next: createdUser => {
+        this.usersSignal.update(users => [...users, createdUser]);
         this.loadingSignal.set(false);
       },
       error: err => {
@@ -44,7 +44,7 @@ export class UsersStore {
       }
     });
   }
-  
+
     /**
    * Updates an existing category.
    * @param updatedUser - The category to update.
@@ -53,9 +53,9 @@ export class UsersStore {
     this.loadingSignal.set(true);
     this.errorSignal.set(null);
     this.iamApi.updateUser(updatedUser).pipe(retry(2)).subscribe({
-      next: category => {
-        this.usersSignal.update(categories =>
-          categories.map(c => c.id === category.id ? category : c)
+      next: user => {
+        this.usersSignal.update(users =>
+          users.map(c => c.id === user.id ? user : c)
         );
         this.loadingSignal.set(false);
       },
@@ -92,8 +92,8 @@ export class UsersStore {
     this.loadingSignal.set(true);
     this.errorSignal.set(null);
     this.iamApi.getUsers().pipe(takeUntilDestroyed()).subscribe({
-      next: categories => {
-        this.usersSignal.set(categories);
+      next: users => {
+        this.usersSignal.set(users);
         this.loadingSignal.set(false);
       },
       error: err => {
@@ -115,4 +115,13 @@ export class UsersStore {
     }
     return fallback;
   }
-}
+
+  // metodo para login
+  findUserByCredentials(username: string, password: string): User | undefined {
+    const user = this.users().find(
+      u => u.username === username && u.password === password
+    );
+    return user;
+  }
+
+  }

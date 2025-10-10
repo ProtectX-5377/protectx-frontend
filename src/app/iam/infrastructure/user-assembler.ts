@@ -35,7 +35,11 @@ export class UserAssembler implements BaseAssembler<User, UserResource, UsersRes
     toResourceFromEntity(entity: User): UserResource {
     return {
         id: entity.id,
-        name: entity.name
+        name: entity.name,
+        username: entity.username,
+        password: entity.password,
+        email: entity.email
+
     } as UserResource;
     }
 }
