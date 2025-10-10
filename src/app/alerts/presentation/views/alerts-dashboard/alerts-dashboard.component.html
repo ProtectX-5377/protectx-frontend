@@ -1,0 +1,51 @@
+<app-navbar-component></app-navbar-component>
+
+<div class="alerts-container">
+  <div class="alerts-content">
+    <div class="alerts-header">
+      <div class="alert-icon">🚨</div>
+      <h2 class="alerts-title">{{ 'ALERTS.TITLE' | translate }}</h2>
+    </div>
+
+    <div class="filters-section">
+      <span class="filter-label">{{ 'ALERTS.FILTERS' | translate }}:</span>
+      <div class="filter-group">
+        <label>{{ 'ALERTS.TIME' | translate }}</label>
+        <select class="filter-select">
+          <option value="all">{{ 'ALERTS.ALL_TIME' | translate }}</option>
+          <option value="today">{{ 'ALERTS.TODAY' | translate }}</option>
+          <option value="week">{{ 'ALERTS.THIS_WEEK' | translate }}</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>{{ 'ALERTS.LOCATION' | translate }}:</label>
+        <select class="filter-select">
+          <option value="all">{{ 'ALERTS.ALL_LOCATIONS' | translate }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="alerts-list">
+      @if (alertsStore.loading()) {
+        <div class="loading">{{ 'COMMON.LOADING' | translate }}</div>
+      } @else if (alertsStore.error()) {
+        <div class="error">{{ alertsStore.error() }}</div>
+      } @else if (alertsStore.alerts().length === 0) {
+        <div class="no-alerts">{{ 'ALERTS.NO_ALERTS' | translate }}</div>
+      } @else {
+        @for (alert of alertsStore.alerts(); track alert.id) {
+          <div class="alert-item">
+            <div class="alert-icon-type">{{ getAlertIcon(alert.type) }}</div>
+            <div class="alert-details">
+              <span class="alert-message">{{ alert.message }}</span>
+            </div>
+            <div class="alert-meta">
+              <span class="alert-date">{{ alert.date }}</span>
+              <span class="alert-time">{{ alert.time }}</span>
+            </div>
+          </div>
+        }
+      }
+    </div>
+  </div>
+</div>

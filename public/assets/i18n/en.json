@@ -46,7 +46,7 @@
     "home": "Home",
     "cams": "Camaras",
     "sens": "Sensors",
-    "hist": "History",
+    "alerts": "Alerts",
     "confg": "Settings",
     "logout": "Log Out"
   },
@@ -78,5 +78,16 @@
   "COMMON": {
     "LOADING": "Loading...",
     "BACK": "Back"
+  },
+  "ALERTS": {
+    "TITLE": "Recent alerts",
+    "FILTERS": "Filters",
+    "TIME": "time",
+    "LOCATION": "location",
+    "ALL_TIME": "all",
+    "TODAY": "today",
+    "THIS_WEEK": "this week",
+    "ALL_LOCATIONS": "all",
+    "NO_ALERTS": "No alerts"
   }
 }

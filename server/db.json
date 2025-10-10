@@ -67,5 +67,61 @@
       "lastRecording": "2024-01-14T18:45:00Z",
       "location": "Cocina"
     }
+  ],
+  "alerts": [
+    {
+      "id": 1,
+      "type": "motion",
+      "message": "Movimiento detectado en Sala",
+      "location": "Sala",
+      "date": "5/10",
+      "time": "10:57",
+      "severity": 5
+    },
+    {
+      "id": 2,
+      "type": "motion",
+      "message": "Movimiento detectado en Puerta principal",
+      "location": "Puerta principal",
+      "date": "5/10",
+      "time": "8:12",
+      "severity": 5
+    },
+    {
+      "id": 3,
+      "type": "smoke",
+      "message": "Sensor de humo activado en Cocina",
+      "location": "Cocina",
+      "date": "5/10",
+      "time": "7:03",
+      "severity": 5
+    },
+    {
+      "id": 4,
+      "type": "battery",
+      "message": "Nivel de bateria bajo en sensor de sala",
+      "location": "Sala",
+      "date": "4/10",
+      "time": "23:08",
+      "severity": 4
+    },
+    {
+      "id": 5,
+      "type": "vibration",
+      "message": "Sensor de vibración detectó golpe en Reja frontal",
+      "location": "Reja frontal",
+      "date": "4/10",
+      "time": "22:01",
+      "severity": 4
+    },
+    {
+      "id": 6,
+      "type": "vibration",
+      "message": "Sensor de vibración detecto cristal roto en Sala",
+      "location": "Sala",
+      "date": "4/10",
+      "time": "15:15",
+      "severity": 4
+    }
   ]
 }

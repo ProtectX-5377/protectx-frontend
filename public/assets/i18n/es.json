@@ -46,7 +46,7 @@
     "home": "Inicio",
     "cams": "Camaras",
     "sens": "Sensores",
-    "hist": "Historial",
+    "alerts": "Alertas",
     "confg": "Configuracion",
     "logout": "Cerrar Sesion"
   },
@@ -80,6 +80,18 @@
     "CAMERA_NOT_FOUND": "Cámara no encontrada"
   },
   "COMMON": {
-    "BACK": "Regresar"
+    "BACK": "Regresar",
+    "LOADING": "Cargando..."
+  },
+  "ALERTS": {
+    "TITLE": "Alertas recientes",
+    "FILTERS": "Filtros",
+    "TIME": "tiempo",
+    "LOCATION": "ubicación",
+    "ALL_TIME": "todo",
+    "TODAY": "hoy",
+    "THIS_WEEK": "esta semana",
+    "ALL_LOCATIONS": "todo",
+    "NO_ALERTS": "No hay alertas"
   }
 }
