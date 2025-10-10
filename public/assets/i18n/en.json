@@ -7,5 +7,41 @@
     "lgwith": "Log-In with",
     "regquestion": "You dont't have an account?",
     "register": "Register Now"
+  },
+  "signin": {
+    "req": "is required",
+    "submit": "Sign-In",
+    "title": "User Registration",
+    "success": {
+      "title": "Successful Resgistration",
+      "message": "Your account has been created. You will be redirected to Log-In.",
+      "confirm": "Ir al login"
+    },
+    "name": {
+      "frm": "Name",
+      "ph": "Your Name",
+      "errReq": "Your name",
+      "errLen": "must be at least 3 char long"
+    },
+    "username": {
+      "frm": "Username",
+      "ph": "Your Username",
+      "errReq": "Your username",
+      "errLen": "must be at least 4 char long"
+    },
+    "password": {
+      "frm": "Your password",
+      "ph": "Your Username",
+      "errReq": "Your username",
+      "errLen": "must be at least 6 char long"
+    },
+    "email": {
+      "frm": "Email",
+      "ph": "email@example.com",
+      "errReq": "Your email",
+      "errLen": "has an invalid format"
+    }
+
+
   }
 }

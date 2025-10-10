@@ -1,3 +1,54 @@
 <section class="login-container">
+  <h2>{{ 'signin.title' | translate }}</h2>
+  <form [formGroup]="signinForm" (ngSubmit)="onSubmit()" class="login-form">
 
+    <div class="form-group">
+      <label>{{ 'signin.name.frm' | translate }}</label>
+      <input formControlName="name" placeholder="{{ 'signin.name.ph' | translate }}" />
+      <div *ngIf="hasError('name', 'required')" class="error">
+        {{ 'signin.name.errReq' | translate }} {{ 'signin.req' | translate }}.
+      </div>
+      <div *ngIf="hasError('name', 'minlength')" class="error">
+        {{ 'signin.name.errReq' | translate }} {{ 'signin.name.errLen' | translate }}.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>{{ 'signin.username.frm' | translate }}</label>
+      <input formControlName="username" placeholder="{{ 'signin.username.frm' | translate }}" />
+      <div *ngIf="hasError('username', 'required')" class="error">
+        {{ 'signin.username.errReq' | translate }} {{ 'signin.req' | translate }}.
+      </div>
+      <div *ngIf="hasError('username', 'minlength')" class="error">
+        {{ 'signin.username.errReq' | translate }} {{ 'signin.username.errLen' | translate }}.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>{{ 'signin.password.frm' | translate }}</label>
+      <input type="password" formControlName="password" placeholder="{{ 'signin.password.frm' | translate }}" />
+      <div *ngIf="hasError('password', 'required')" class="error">
+        {{ 'signin.password.errReq' | translate }} {{ 'signin.req' | translate }}.
+      </div>
+      <div *ngIf="hasError('password', 'minlength')" class="error">
+        {{ 'signin.password.errReq' | translate }} {{ 'signin.password.errLen' | translate }}.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>{{ 'signin.email.frm' | translate }}</label>
+      <input formControlName="email" placeholder="{{ 'signin.email.frm' | translate }}" />
+      <div *ngIf="hasError('email', 'required')" class="error">
+        {{ 'signin.email.errReq' | translate }} {{ 'signin.req' | translate }}.
+      </div>
+      <div *ngIf="hasError('email', 'email')" class="error">
+        {{ 'signin.email.errReq' | translate }} {{ 'signin.email.errLen' | translate }}.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="signinForm.invalid">
+      {{ 'signin.submit' | translate }}
+    </button>
+
+  </form>
 </section>

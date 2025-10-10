@@ -1,18 +1,39 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "Leanne Graham",
-            "username": "LGraham",
-            "password": "admin123",
-            "email": "LGraham@gmail.com"
-        },
-        {
-            "id": 2,
-            "name": "Ervin Howell",
-            "username": "EHowell",
-            "password": "admin123",
-            "email": "EHowell@gmail.com"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "LGraham",
+      "password": "admin123",
+      "email": "LGraham@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "EHowell",
+      "password": "admin123",
+      "email": "EHowell@gmail.com"
+    },
+    {
+      "name": "Daniel",
+      "username": "DRuiz",
+      "password": "opensource",
+      "email": "druiz@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Nicole",
+      "username": "NicoCape",
+      "password": "obsidiana",
+      "email": "nicape@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "Lesb",
+      "username": "lisbon",
+      "password": "lisbon",
+      "email": "lisbon@gmail.com",
+      "id": 5
+    }
+  ]
 }

@@ -8,3 +8,42 @@
   background-color: #0E587C;
 }
 
+
+
+/* Botón centrado debajo del contenido */
+.back-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 2rem auto;
+  background-color: #0E587C;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(14, 88, 124, 0.3);
+}
+
+/* Hover animado */
+.back-login-btn:hover {
+  background-color: #09425e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(14, 88, 124, 0.4);
+}
+
+/* Ícono */
+.back-login-btn svg {
+  stroke: white;
+  transition: transform 0.2s ease;
+}
+
+/* Pequeña animación del ícono al hover */
+.back-login-btn:hover svg {
+  transform: translateX(-3px);
+}
+
