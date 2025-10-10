@@ -1,56 +1,78 @@
 {
   "login": {
-    "username": "Nombre de Usuario",
-    "password": "Contrasenia",
-    "submit": "Ingresar",
-    "welcome": "Bienvenido a Sentinel",
-    "lgwith": "Inicia sesion con ",
-    "regquestion": "¿No tienes una cuenta?",
-    "register": "Registrate Ahora"
-  },
-  "signin": {
-    "req": "es obligatorio",
-    "submit": "Registrate",
-    "title": "Registro de Usuario",
-    "success": {
-      "title": "Registro exitoso",
-      "message": "Tu cuenta ha sido creada correctamente. Serás redirigido al inicio de sesión.",
-      "confirm": "Ir al login"
-    },
-    "name": {
-      "frm": "Nombre",
-      "ph": "Tu Nombre",
-      "errReq": "Tu nombre",
-      "errLen": "debe tener al menos 3 caracteres"
-    },
-    "username": {
-      "frm": "Nombre de usuario",
-      "ph": "Tu Nombre de Usuario",
-      "errReq": "Your username",
-      "errLen": "debe tener al menos 4 caracteres"
-    },
-    "password": {
-      "frm": "Contrasenia",
-      "ph": "Tu Contrasenia",
-      "errReq": "Tu contrasenia",
-      "errLen": "debe tener al menos 6 caracteres"
-    },
-    "email": {
-      "frm": "Correo Electronico",
-      "ph": "correo@ejemplo.com",
-      "errReq": "Tu correo",
-      "errLen": "tiene un formato invalido"
-    }
-  },
-  "navbar": {
-    "home": "Inicio",
-    "cams": "Camaras",
-    "sens": "Sensores",
-    "hist": "Historial",
-    "confg": "Configuracion",
-    "logout": "Cerrar Sesion"
-  },
-  "CAMERAS": {
+"username": "Nombre de Usuario",
+"password": "Contrasenia",
+"submit": "Ingresar",
+"welcome": "Bienvenido a Sentinel",
+"lgwith": "Inicia sesion con ",
+"regquestion": "¿No tienes una cuenta?",
+"register": "Registrate Ahora"
+},
+"signin": {
+"req": "es obligatorio",
+"submit": "Registrate",
+"title": "Registro de Usuario",
+"success": {
+"title": "Registro exitoso",
+"message": "Tu cuenta ha sido creada correctamente. Serás redirigido al inicio de sesión.",
+"confirm": "Ir al login"
+},
+"name": {
+"frm": "Nombre",
+"ph": "Tu Nombre",
+"errReq": "Tu nombre",
+"errLen": "debe tener al menos 3 caracteres"
+},
+"username": {
+"frm": "Nombre de usuario",
+"ph": "Tu Nombre de Usuario",
+"errReq": "Your username",
+"errLen": "debe tener al menos 4 caracteres"
+},
+"password": {
+"frm": "Contrasenia",
+"ph": "Tu Contrasenia",
+"errReq": "Tu contrasenia",
+"errLen": "debe tener al menos 6 caracteres"
+},
+"email": {
+"frm": "Correo Electronico",
+"ph": "correo@ejemplo.com",
+"errReq": "Tu correo",
+"errLen": "tiene un formato invalido"
+}
+},
+"navbar": {
+"home": "Inicio",
+"cams": "Camaras",
+"sens": "Sensores",
+"hist": "Historial",
+"confg": "Configuracion",
+"logout": "Cerrar Sesion"
+},
+"home": {
+"welcome": "Bienvenido",
+"prev": "Se han recibido",
+"post": "alertas desde la ultima revision",
+"p": "Tu hogar esta seguro",
+"cams": "Gestionar Camaras",
+"community": "Comunidad",
+"alerts": "Alertas",
+"sens": "Gestionar Sensores"
+},
+"settings": {
+"profile": "Profile",
+"suport": "Asistance",
+"security": "Security"
+},
+"assistance": {
+"nav": {
+"freques": "Preguntas Frequentes",
+"humassist": "Asistencia Personal"
+}
+},
+
+"CAMERAS": {
     "TITLE": "Cámaras",
     "SUBTITLE": "Gestión y monitoreo de cámaras de seguridad",
     "ONLINE": "En línea",
