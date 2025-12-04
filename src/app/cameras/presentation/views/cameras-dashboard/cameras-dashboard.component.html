@@ -72,4 +72,69 @@
       <button class="btn-primary">{{ 'CAMERAS.ADD_CAMERA' | translate }}</button>
     </div>
   }
+
+  <!-- Botón para abrir/cerrar formulario -->
+  <div class="add-camera-container">
+    <button class="btn-primary" (click)="toggleForm()">
+      {{ formVisible() ? ('common.cancel' | translate) : ('CAMERAS.ADD_CAMERA' | translate) }}
+    </button>
+  </div>
+
+  <!-- Formulario embebido -->
+  @if (formVisible()) {
+    <div class="camera-form-container">
+      <h2>{{ 'CAMERAS.NEW_CAMERA' | translate }}</h2>
+
+      <form (ngSubmit)="submitForm()" class="camera-form" #form="ngForm">
+
+        <label>
+          {{ 'CAMERAS.NAME' | translate }}:
+          <input type="text" required [(ngModel)]="newCameraForm().name" name="name" #name="ngModel">
+        </label>
+
+        <label>
+          {{ 'CAMERAS.STATUS' | translate }}:
+          <select [(ngModel)]="newCameraForm().status" name="status">
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+            <option value="recording">Recording</option>
+          </select>
+        </label>
+
+        <label>
+          {{ 'CAMERAS.RESOLUTION' | translate }}:
+          <select [(ngModel)]="newCameraForm().resolution" name="resolution">
+            <option value="high">High</option>
+            <option value="low">Low</option>
+          </select>
+        </label>
+
+        <label>
+          {{ 'CAMERAS.NIGHT_VISION' | translate }}:
+          <input type="checkbox" [(ngModel)]="newCameraForm().nightVision" name="nightVision">
+        </label>
+
+        <label>
+          {{ 'CAMERAS.MOTION_DETECTION' | translate }}:
+          <input type="checkbox" [(ngModel)]="newCameraForm().motionDetection" name="motionDetection">
+        </label>
+
+        <label>
+          {{ 'CAMERAS.LOCATION' | translate }}:
+          <input type="text" [(ngModel)]="newCameraForm().location" name="location">
+        </label>
+
+        <label>
+          {{ 'CAMERAS.STREAM_URL' | translate }}:
+          <input type="text" [(ngModel)]="newCameraForm().streamUrl" name="streamUrl">
+        </label>
+
+        <button type="submit" class="btn-save" [disabled]="form.invalid">
+          {{ 'common.save' | translate }}
+        </button>
+
+      </form>
+    </div>
+  }
+
 </div>
