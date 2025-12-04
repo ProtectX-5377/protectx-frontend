@@ -1,4 +1,4 @@
-# Etapa 1: build de Angular
+# Etapa 1: Build de Angular
 FROM node:22 AS build
 
 WORKDIR /app
@@ -9,13 +9,16 @@ RUN npm install
 COPY . .
 RUN npm run build --prod
 
-# Etapa 2: servir con Nginx
+# Etapa 2: Servir con Nginx
 FROM nginx:stable
 
-# Copia el build de Angular a nginx
+# Copiar config de nginx compatible con Railway
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copiar el build de Angular
 COPY --from=build /app/dist/Sentinel/ /usr/share/nginx/html/
 
-# Expone puerto 80 para Railway
+# Puerto (Railway lo ignora, pero es estándar)
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
