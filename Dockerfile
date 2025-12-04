@@ -12,8 +12,8 @@ RUN npm run build --prod
 # Etapa 2: servir con Nginx
 FROM nginx:stable
 
-COPY --from=build /app/dist/Sentinel /usr/share/nginx/html
-./
+# Copia el build de Angular a nginx
+COPY --from=build /app/dist/Sentinel/ /usr/share/nginx/html/
 
 # Expone puerto 80 para Railway
 EXPOSE 80
