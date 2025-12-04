@@ -1,26 +1,19 @@
-# 1. Etapa de build
+# Etapa 1: build de Angular
 FROM node:22 AS build
+
 WORKDIR /app
 
-# Copia package.json e instala dependencias
 COPY package*.json ./
-RUN npm ci
+RUN npm install
 
-# Copia todo el proyecto
-COPY dist/Sentinel/browser .
-
-# Compila Angular
+COPY . .
 RUN npm run build --prod
 
-# 2. Etapa de servidor Nginx
+# Etapa 2: servir con Nginx
 FROM nginx:stable
-WORKDIR /usr/share/nginx/html
 
-# Limpia contenido por defecto
-RUN rm -rf ./*
-
-# Copia SOLO lo generado por Angular
-COPY --from=build /app/dist/Sentinel/ ./
+COPY --from=build /app/dist/Sentinel /usr/share/nginx/html
+./
 
 # Expone puerto 80 para Railway
 EXPOSE 80
