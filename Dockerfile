@@ -9,7 +9,7 @@ RUN npm run build --prod
 # Etapa 2
 FROM nginx:stable
 
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY default.conf /etc/nginx/conf.d/default.conf
 
 COPY --from=build /app/dist/Sentinel /usr/share/nginx/html
 
